@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="max-h-full">
     <slot/>
   </div>
 </template>

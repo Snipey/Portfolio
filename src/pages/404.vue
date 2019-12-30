@@ -1,5 +1,5 @@
 <template>
-  <Layout class="bg-teal-400">
+  <Layout class="bg-gray-700">
     <main class="flex items-center h-screen">
       <div class="w-full sm:w-3/4 md:w-3/5 lg:w-2/5 max-w-xs mx-auto px-6 md:px-0 relative">
         <span class="absolute -mt-10 text-5xl inset-x-0 text-center pointer-events-none">🧐</span>
