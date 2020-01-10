@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap parent">
-    <Sidebar class="sidebar px-10"/>
+    <Sidebar class="sidebar w-1/6"/>
     <div class="mx-auto content">
       <slot />
     </div>

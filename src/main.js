@@ -1,5 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 // import PostLayout from '~/layouts/PostLayout.vue'
+import VueDisqus from 'vue-disqus'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faTwitter, faGitlab, faTwitch } from '@fortawesome/free-brands-svg-icons'
@@ -12,7 +13,7 @@ export default function (Vue, { head }) {
   Vue.component('Layout', DefaultLayout)
   Vue.component('font-awesome', FontAwesomeIcon)
   // Vue.component('PostLayout', PostLayout)
-
+  Vue.use(VueDisqus)
   head.htmlAttrs = { lang: 'en', class: 'h-full' }
   head.bodyAttrs = { class: 'antialiased font-serif' }
 

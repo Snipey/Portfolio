@@ -11,5 +11,5 @@
 @import 'tailwindcss/utilities';
 
 html {
-	@apply bg-gray-700
+	@apply bg-gray-200;
 }
