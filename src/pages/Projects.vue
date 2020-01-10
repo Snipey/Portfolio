@@ -6,10 +6,12 @@
         <p class="text-black text-lg sm:text-3xl">Some projects I have worked on.</p>
       </header>
       <div class="flex flex-wrap justify-center mb-10">
-        <div class="border-2 shadow-md flex flex-col mt-6 py-6 px-16">
-          <span class="text-2xl max-w-full">TITLE</span>
-          <span class="text-xl max-w-full">Type</span>
-          <p>Description</p>
+        <div v-for="item in projects" class="mx-4">
+          <div class="border-2 shadow-md flex flex-col mt-6 py-6 px-16">
+            <span class="text-2xl max-w-full"><a :href="item.url">{{ item.title }}</a></span>
+            <pre class="text-xl max-w-full">{{ item.type }}</pre>
+            <p>{{ item.description }}</p>
+          </div>
         </div>     
       </div>
       <site-footer class="pb-8 sm:pb-10" />
@@ -24,6 +26,15 @@ import SiteFooter from '@/components/Footer'
 export default {
   components: {
     SiteFooter
+  },
+  data () {
+    return {
+      projects: [
+        { title: 'Sporkbot', type: 'Discord Bot', url: 'https://github.com/the-sporkening/Sporkbot', description: 'A general purpose bot build with discordjs and Akairo' },
+        { title: 'PulseJS', type: 'Documentation', url: 'https://github.com/pulse-framework/pulse-docs', description: 'Documentation for the Pulse framework' },
+        { title: 'Odin Media Center', type: 'Software', url: 'https://github.com/OdinMedia', description: 'A media server for streaming media built in rust ussing WebAssembly' }
+      ]
+    }
   },
   metaInfo () {
     return {
