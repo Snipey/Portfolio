@@ -9,7 +9,7 @@
           This post is over a year old, some of this information may be out of date.
         </alert>
 
-        <div :class="{'pb-10': $page.post.author || $page.post.tags}" class="markdown text-lg leading-normal text-gray-700" v-html="$page.post.content" />
+        <div :class="{'pb-10': $page.post.author || $page.post.tags}" class="markdown text-lg leading-normal text-white" v-html="$page.post.content" />
 
         <footer v-if="$page.post.author || $page.post.tags" class="flex flex-wrap pb-10 sm:pb-16">
           <div>
@@ -26,7 +26,7 @@
             </figure>
             <div class="px-4 sm:w-4/5 text-center sm:text-left">
               <h4 class="font-sans font-bold text-lg sm:text-xl mb-2 sm:mb-4">
-                <g-link :to="`${$page.post.author.path}/`" class="text-black hover:text-gray-600 capitalize border-b-2 border-transparent transition-color">{{ titleCase($page.post.author.title) }}</g-link>
+                <g-link :to="`${$page.post.author.path}/`" class="text-white hover:text-gray-600 capitalize border-b-2 border-transparent transition-color">{{ titleCase($page.post.author.title) }}</g-link>
               </h4>
               <p class="leading-normal">
                 <g-link :to="`${$page.post.author.path}/`" class="text-blue-500 hover:text-blue-400 transition-color">See all posts by {{ titleCase($page.post.author.title) }} &rarr;</g-link>

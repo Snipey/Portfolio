@@ -21,18 +21,18 @@
     </div>
     <div v-else class="pt-24">
       <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6">
-        <p class="text-gray-700 text-xs mb-2 uppercase">{{ post.timeToRead }} min read</p>
-        <h1 class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-black">{{ post.title }}</h1>
-        <p class="text-gray-700">
+        <p class="text-white text-xs mb-2 uppercase">{{ post.timeToRead }} min read</p>
+        <h1 class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-white">{{ post.title }}</h1>
+        <p class="text-white">
           <span v-if="post.author">
-            <g-link :to="`${post.author.path}/`" class="text-gray-700 capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.author.title) }}</g-link> &bull;
+            <g-link :to="`${post.author.path}/`" class="text-white capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.author.title) }}</g-link> &bull;
           </span>
           <time :datetime="post.datetime" class="capitalize">{{ formattedPublishDate }}</time>
         </p>
       </div>
     </div>
     <nav class="absolute top-0 left-0 z-20 mt-6 ml-6">
-      <g-link to="/" :class="[post.cover ? 'text-white border-white bg-gray-700' : 'text-gray-900 border-gray-400']" class="text-sm border opacity-75 hover:opacity-100 rounded-full px-4 py-2 transition-opacity">&larr; Home</g-link>
+      <g-link to="/" :class="[post.cover ? 'text-white border-white bg-gray-700' : 'text-white border-gray-400']" class="text-sm border opacity-75 hover:opacity-100 rounded-full px-4 py-2 transition-opacity">&larr; Home</g-link>
     </nav>
   </header>
 </template>

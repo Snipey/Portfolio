@@ -109,7 +109,8 @@ module.exports = {
                   extensions: ['css', 'vue', 'js']
                 }
               ],
-              whitelistPatterns: [/shiki/]
+              whitelist: ['svg-inline--fa'],
+              whitelistPatterns: [/shiki/, /fa-$/]
             }),
           ])
         }

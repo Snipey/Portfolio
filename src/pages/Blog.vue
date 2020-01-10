@@ -1,8 +1,8 @@
 <template>
-  <Layout>
-    <section class="flex flex-1 content">
+  <Layout class="">
+    <main>
       <header>
-        <div class="max-w-xl md:max-w-3xl mx-auto xl:max-w-4xl text-center px-6 py-10 md:py-32 border-b border-gray-300">
+        <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6 py-10 md:py-32 border-b border-gray-300">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">
             <g-link to="/" class="text-white">< Snipey /></g-link>
           </h1>
@@ -14,12 +14,10 @@
       </section>
       <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
       <site-footer class="py-8 sm:py-16" />
-    </section>
+    </main>
   </Layout>
 </template>
-<style scoped>
 
-</style>
 <script>
 import config from '~/.temp/config.js'
 import SiteFooter from '@/components/Footer'

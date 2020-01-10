@@ -9,3 +9,7 @@
 @import 'components/markdown';
 
 @import 'tailwindcss/utilities';
+
+html {
+	@apply bg-gray-700
+}

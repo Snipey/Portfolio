@@ -16,7 +16,7 @@
   }
 
   h2, h3, h4, h5, h6 {
-    @apply font-sans font-bold text-black my-6;
+    @apply font-sans font-bold text-white my-6;
   }
 
   h5, h6 {
@@ -47,12 +47,12 @@
   }
 
   code.shiki {
-    @apply bg-gray-100 text-gray-700 !important;
+    @apply bg-gray-100 text-white !important;
     @apply border border-gray-300 p-4 block mb-4 font-mono text-sm leading-code overflow-x-auto scrolling-touch;
   }
 
   .shiki-inline {
-    @apply bg-gray-100 text-gray-700 !important;
+    @apply bg-gray-100 text-white !important;
     @apply border border-gray-300 text-xs px-2 py-1 rounded;
   }
 
@@ -62,7 +62,7 @@
 
   dl {
     dt {
-      @apply text-black text-sm font-sans font-bold uppercase mb-2;
+      @apply text-white text-sm font-sans font-bold uppercase mb-2;
       + dd {
         @apply mb-4 pl-2;
       }
