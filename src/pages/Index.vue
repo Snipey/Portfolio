@@ -4,9 +4,9 @@
       <header>
         <div class="max-w-xl md:max-w-3xl mx-auto xl:max-w-4xl text-center px-6 py-10 md:py-32 border-b border-gray-300">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">
-            <g-link to="/" class="text-white">< Snipey /></g-link>
+            <g-link to="/" class="text-black">< Snipey /></g-link>
           </h1>
-          <p class="text-white text-lg sm:text-3xl">Thoughts, stories, and ideas.</p>
+          <p class="text-black text-lg sm:text-3xl">Thoughts, stories, and ideas.</p>
         </div>
       </header>
       <section>

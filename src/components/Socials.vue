@@ -2,7 +2,7 @@
 	<div class="flex justify-center">
 		<div v-for="item in socials">
 			<a :href="item.link">
-				<font-awesome class="icon hover:text-purple-600" :icon="['fab', `${item.name}`]"/>
+				<font-awesome class="icon text-purple-400 hover:text-purple-600" :icon="['fab', `${item.name}`]"/>
 			</a>
 		</div>
 	</div>
@@ -23,7 +23,8 @@ export default {
 			socials: [
 				{ name: 'github', link: 'https://github.com/Snipey' },
 				{ name: 'twitch', link: 'https://twitch.tv/SnipeyDev' },
-				{ name: 'gitlab', link: 'https://gitlab.com/Snipey' }
+				{ name: 'gitlab', link: 'https://gitlab.com/Snipey' },
+				{ name: 'twitter', link: 'https://twitter.com/SnipeyDev' },
 			]
 		}
 	}

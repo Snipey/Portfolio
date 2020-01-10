@@ -3,7 +3,7 @@
     <div v-if="post.cover" class="post-cover overflow-hidden relative" :class="[post.fullscreen ? 'fullscreen' : 'max-h-cover']">
       <div class="max-w-xl md:max-w-3xl xl:max-w-4xl text-center px-6 absolute z-10" :class="[post.fullscreen ? 'flex flex-col items-center m-auto inset-0': 'mx-auto bottom-0 inset-x-0 pb-16']">
         <div class="m-auto">
-          <p class="font font-semibold text-white text-xs mb-2 uppercase">{{ post.timeToRead }} min read</p>
+          <p class="font font-bold text-white text-xs mb-2 uppercase">{{ post.timeToRead }} min read</p>
           <h1 class="text-3xl sm:text-5xl font-sans font-bold leading-tight mb-2 text-white">{{ post.title }}</h1>
           <p class="text-white">
             <span v-if="post.author">
@@ -31,9 +31,6 @@
         </p>
       </div>
     </div>
-    <nav class="absolute top-0 left-0 z-20 mt-6 ml-6">
-      <g-link to="/" :class="[post.cover ? 'text-white border-white bg-gray-700' : 'text-white border-gray-400']" class="text-sm border opacity-75 hover:opacity-100 rounded-full px-4 py-2 transition-opacity">&larr; Home</g-link>
-    </nav>
   </header>
 </template>
 

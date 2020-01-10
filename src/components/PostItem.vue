@@ -3,18 +3,18 @@
     <div class="mx-auto max-w-3xl px-6">
       <div class="py-8 sm:py-20 border-b border-gray-300">
         <header class="text-center mb-8">
-          <time :datetime="post.datetime" class="text-white text-xs mb-2 uppercase">{{ formatPublishDate(post.datetime) }}</time>
+          <time :datetime="post.datetime" class="text-black text-xs mb-2 uppercase">{{ formatPublishDate(post.datetime) }}</time>
           <h2 class="text-3xl sm:text-4xl leading-tight font-sans mb-1 sm:mb-2">
-            <g-link :to="`${post.path}/`" class="text-white font-bold">{{ post.title }}</g-link>
+            <g-link :to="`${post.path}/`" class="text-black font-bold">{{ post.title }}</g-link>
           </h2>
-          <p class="text-white leading-normal text-sm sm:text-base">
-            <span v-if="post.author">by <g-link :to="`${post.author.path}/`" class="text-white capitalize border-b border-transparent hover:border-gray-400 transition-border-color" v-if="post.author">{{ titleCase(post.author.title) }}</g-link></span>
-            <span v-if="post.tags && post.tags.length > 0"> in <g-link :to="`${post.tags[0].path}/`" class="text-white capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.tags[0].title) }}</g-link></span>
+          <p class="text-black leading-normal text-sm sm:text-base">
+            <span v-if="post.author">by <g-link :to="`${post.author.path}/`" class="text-black capitalize border-b border-transparent hover:border-gray-400 transition-border-color" v-if="post.author">{{ titleCase(post.author.title) }}</g-link></span>
+            <span v-if="post.tags && post.tags.length > 0"> in <g-link :to="`${post.tags[0].path}/`" class="text-black capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.tags[0].title) }}</g-link></span>
             <span v-if="post.author || (post.tags && post.tags.length > 0)"> · </span>
             <span>{{ post.timeToRead }} min read</span>
           </p>
         </header>
-        <p class="leading-normal text-white text-lg px-2 sm:px-4 md:px-10" v-html="excerpt(post, 280, ' ...')"></p>
+        <p class="leading-normal text-black text-lg px-2 sm:px-4 md:px-10" v-html="excerpt(post, 280, ' ...')"></p>
       </div>
     </div>
   </article>
