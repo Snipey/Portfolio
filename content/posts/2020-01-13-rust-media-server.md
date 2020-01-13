@@ -1,7 +1,7 @@
 ---
-title: "Building a Media server in Rust"
+title: "Building a media server in Rust"
 slug: rust-media-server
-description: "getting started on the Odin Project"
+description: "Getting started on the Odin Media Server Project"
 date: 2020-01-13 13:18:54
 author: Stephen
 tags:
