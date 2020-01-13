@@ -13,8 +13,6 @@
 		height: 32px;
 		margin-right: 4px;
 	}
-</style>>
-
 </style>
 <script>
 export default {
