@@ -35,24 +35,24 @@ export default {
   data () {
     return {
       projects: [
+        { 
+          title: 'Odin Media Center',
+          type: 'Software',
+          url: 'https://github.com/OdinMedia',
+          description: 'A media server for streaming media built in rust using WebAssembly'
+        },
+        {
+          title: 'PulseJS - Docs',
+          type: 'Documentation',
+          url: 'https://github.com/pulse-framework/pulse-docs',
+          description: 'Documentation for the Pulse framework'
+        },
         {
           title: 'Sporkbot',
           type: 'Discord Bot',
           url: 'https://github.com/the-sporkening/Sporkbot',
           description: 'A general purpose bot build with discordjs and Akairo'
         },
-        {
-          title: 'PulseJS',
-          type: 'Documentation',
-          url: 'https://github.com/pulse-framework/pulse-docs',
-          description: 'Documentation for the Pulse framework'
-        },
-        { 
-          title: 'Odin Media Center',
-          type: 'Software',
-          url: 'https://github.com/OdinMedia',
-          description: 'A media server for streaming media built in rust using WebAssembly'
-        }
       ]
     }
   },
