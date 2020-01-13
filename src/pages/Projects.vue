@@ -6,10 +6,10 @@
         <p class="text-black text-lg sm:text-3xl">Some projects I have worked on.</p>
       </header>
       <div class="flex flex-wrap justify-center mb-10">
-        <div v-for="item in projects" class="mx-4">
+        <div v-for="item in projects" class="mx-6">
           <div class="border-2 shadow-md flex flex-col mt-6 py-6 px-16">
-            <span class="text-2xl max-w-full"><a :href="item.url">{{ item.title }}</a></span>
-            <pre class="text-xl max-w-full">{{ item.type }}</pre>
+            <span class="text-2xl max-w-full font-medium"><a :href="item.url">{{ item.title }}</a></span>
+            <span class="text-md max-w-full type-font">{{ item.type }}</span>
             <p>{{ item.description }}</p>
           </div>
         </div>     
@@ -18,7 +18,12 @@
     </main>
   </Layout>
 </template>
-
+<style scoped>
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap');
+.type-font {
+  font-family: 'Nunito', sans-serif;  
+}
+</style>
 <script>
 import config from '~/.temp/config.js'
 import SiteFooter from '@/components/Footer'
@@ -30,9 +35,24 @@ export default {
   data () {
     return {
       projects: [
-        { title: 'Sporkbot', type: 'Discord Bot', url: 'https://github.com/the-sporkening/Sporkbot', description: 'A general purpose bot build with discordjs and Akairo' },
-        { title: 'PulseJS', type: 'Documentation', url: 'https://github.com/pulse-framework/pulse-docs', description: 'Documentation for the Pulse framework' },
-        { title: 'Odin Media Center', type: 'Software', url: 'https://github.com/OdinMedia', description: 'A media server for streaming media built in rust ussing WebAssembly' }
+        {
+          title: 'Sporkbot',
+          type: 'Discord Bot',
+          url: 'https://github.com/the-sporkening/Sporkbot',
+          description: 'A general purpose bot build with discordjs and Akairo'
+        },
+        {
+          title: 'PulseJS',
+          type: 'Documentation',
+          url: 'https://github.com/pulse-framework/pulse-docs',
+          description: 'Documentation for the Pulse framework'
+        },
+        { 
+          title: 'Odin Media Center',
+          type: 'Software',
+          url: 'https://github.com/OdinMedia',
+          description: 'A media server for streaming media built in rust using WebAssembly'
+        }
       ]
     }
   },

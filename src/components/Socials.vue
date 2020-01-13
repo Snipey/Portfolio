@@ -1,5 +1,5 @@
 <template>
-	<div class="flex justify-center">
+	<div class="flex justify-center pt-2">
 		<div v-for="item in socials">
 			<a :href="item.link">
 				<font-awesome class="icon text-purple-400 hover:text-purple-600" :icon="['fab', `${item.name}`]"/>
