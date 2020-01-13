@@ -3,7 +3,6 @@
     <div class="mx-auto max-w-3xl px-6">
       <div class="py-8 sm:py-20 border-b border-gray-300">
         <header class="text-center mb-8">
-          <time :datetime="post.datetime" class="text-black text-xs mb-2 uppercase">{{ formatPublishDate(post.datetime) }}</time>
           <h2 class="text-3xl sm:text-4xl leading-tight font-sans mb-1 sm:mb-2">
             <g-link :to="`${post.path}/`" class="text-black font-bold">{{ post.title }}</g-link>
           </h2>
@@ -12,6 +11,7 @@
             <span v-if="post.tags && post.tags.length > 0"> in <g-link :to="`${post.tags[0].path}/`" class="text-black capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.tags[0].title) }}</g-link></span>
             <span v-if="post.author || (post.tags && post.tags.length > 0)"> · </span>
             <span>{{ post.timeToRead }} min read</span>
+            <time :datetime="post.datetime" class="pl-2 text-sm sm:text-base">{{ formatPublishDate(post.datetime) }}</time>
           </p>
         </header>
         <p class="leading-normal text-black text-lg px-2 sm:px-4 md:px-10" v-html="excerpt(post, 280, ' ...')"></p>
