@@ -2,7 +2,7 @@
   <Layout>
     <section class="flex flex-1 content">
       <header>
-        <div class="max-w-xl md:max-w-3xl mx-auto xl:max-w-4xl text-center px-6 py-10 md:py-32 border-b border-gray-300">
+        <div class="max-w-xl md:max-w-3xl mx-auto xl:max-w-4xl text-center px-6 py-4 md:py-10 border-b-2 border-gray-300">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">
             <g-link to="/" class="text-black">< Snipey /></g-link>
           </h1>
