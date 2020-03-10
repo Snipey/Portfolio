@@ -1,12 +1,12 @@
 <template>
-  <article>
-    <div class="mx-auto max-w-3xl px-6">
-      <div class="py-8 sm:py-20 border-b border-gray-300">
-        <header class="text-center mb-8">
-          <h2 class="text-3xl sm:text-4xl leading-tight font-sans mb-1 sm:mb-2">
-            <g-link :to="`${post.path}/`" class="text-black font-bold">{{ post.title }}</g-link>
+  <article class="flex">
+    <div class="w-3/4 px-4 py-4 mx-auto my-4 bg-white rounded-lg sm:px-6 md:px-10">
+      <div class="py-2 sm:py-20">
+        <header class="mb-8 text-center">
+          <h2 class="mb-1 font-sans text-3xl leading-tight sm:text-4xl sm:mb-2">
+            <g-link :to="`${post.path}/`" class="font-bold text-black">{{ post.title }}</g-link>
           </h2>
-          <p class="text-black leading-normal text-sm sm:text-base">
+          <p class="text-sm leading-normal text-black sm:text-base">
             <span v-if="post.author">by <g-link :to="`${post.author.path}/`" class="text-black capitalize border-b border-transparent hover:border-gray-400 transition-border-color" v-if="post.author">{{ titleCase(post.author.title) }}</g-link></span>
             <span v-if="post.tags && post.tags.length > 0"> in <g-link :to="`${post.tags[0].path}/`" class="text-black capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.tags[0].title) }}</g-link></span>
             <span v-if="post.author || (post.tags && post.tags.length > 0)"> · </span>
@@ -14,7 +14,8 @@
             <time :datetime="post.datetime" class="pl-2 text-sm sm:text-base">{{ formatPublishDate(post.datetime) }}</time>
           </p>
         </header>
-        <p class="leading-normal text-black text-lg px-2 sm:px-4 md:px-10" v-html="excerpt(post, 280, ' ...')"></p>
+        <p class="text-lg leading-normal text-black " v-html="excerpt(post, 290, ' ...')"></p>
+        <a class="px-4 mt-4 bg-gray-600 rounded-lg button">Read more</a>
       </div>
     </div>
   </article>

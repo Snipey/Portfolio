@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-wrap parent">
-    <Sidebar class="sidebar w-1/6"/>
+    <Navbar class="block lg:hidden" @click="menuToggle()"/>
+    <Sidebar class="hidden w-1/6 sidebar lg:block"/>
     <div class="mx-auto content">
       <slot />
     </div>
@@ -24,14 +25,21 @@
 </style>
 <script>
 import config from '~/.temp/config.js';
-import Sidebar from '~/components/Sidebar.vue'
+import Sidebar from '~/components/Sidebar.vue';
+import Navbar from '~/components/Navbar.vue';
 export default {
   components: {
-    Sidebar
+    Sidebar,
+    Navbar
   },
   computed: {
     config () {
       return config
+    }
+  },
+  functions: {
+    menuToggle() {
+      
     }
   }
 }

@@ -1,8 +1,8 @@
 <template>
-	<div class="border-r-2 border-purple-400 pt-6 flex flex-col justify-between sidebar-bg">
+	<div class="flex flex-col justify-between pt-6 border-r-2 border-purple-400 sidebar-bg md:flex-shrink-0">
 		<div class="flex-1">
 			<ul v-for="link in links" class="text-center">
-				<g-link :to="link.path" class="block hover:bg-purple-500 py-6 link-font hover:text-white text-purple-300 transition-color transition-bg">
+				<g-link :to="link.path" class="block py-6 text-purple-300 hover:bg-purple-500 link-font hover:text-white transition-color transition-bg">
 					<li class="">
 						{{ link.name }}
 					</li>
@@ -10,10 +10,10 @@
 			</ul>
 		</div>
 		<!-- Profile Picture -->
-		<div class="flex-0 p-4 text-center pt-2">
-			<img src="https://i.picsum.photos/id/893/200/200.jpg" class="rounded-full mx-auto mb-4 border-4 w-2/3 hover:border-purple-600 border-purple-400  transition-color transition-border-color" />
-			<h2 class="text-white text-2xl font-light hover:underline pt-2 name-font transition-transform">Stephen Freerking</h2>
-			<p class="text-white text-md link-font text-gray-300">Full Stack Developer</p>
+		<div class="p-4 pt-2 text-center flex-0">
+			<img src="https://i.picsum.photos/id/893/200/200.jpg" class="w-2/3 mx-auto mb-4 border-4 border-purple-400 rounded-full hover:border-purple-600 transition-color transition-border-color" />
+			<h2 class="pt-2 text-2xl font-light text-white transition-transform hover:underline name-font">Stephen Freerking</h2>
+			<p class="text-white text-gray-300 text-md link-font">Full Stack Developer</p>
 			<Socials />
 		</div>
 	</div>

@@ -7,14 +7,14 @@
       </header>
       <div class="flex flex-wrap justify-center mb-10">
         <div v-for="item in projects" class="mx-6">
-          <div class="border-2 shadow-md flex flex-col mt-6 py-6 px-16">
+          <div class="border-2 rounded-lg flex flex-col mt-6 py-6 px-16 bg-white">
             <span class="text-2xl max-w-full font-medium"><a :href="item.url">{{ item.title }}</a></span>
             <span class="text-md max-w-full type-font">{{ item.type }}</span>
             <p>{{ item.description }}</p>
           </div>
         </div>     
       </div>
-      <site-footer class="pb-8 sm:pb-10" />
+      <site-footer class="mb-8 sm:my-8 bg-white py-2 px-6 inline-block rounded-lg" />
     </main>
   </Layout>
 </template>

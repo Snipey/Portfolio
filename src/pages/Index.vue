@@ -1,19 +1,11 @@
 <template>
   <Layout>
     <section class="flex flex-1 content">
-      <header>
-        <div class="max-w-xl md:max-w-3xl mx-auto xl:max-w-4xl text-center px-6 py-4 md:py-10 border-b-2 border-gray-300">
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">
-            <g-link to="/" class="text-black">< Snipey /></g-link>
-          </h1>
-          <p class="text-black text-lg sm:text-3xl">Thoughts, stories, and ideas.</p>
-        </div>
-      </header>
       <section>
         <post-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
       </section>
       <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
-      <site-footer class="py-8 sm:py-16" />
+      <site-footer class="mb-8 sm:my-8 bg-white py-2 px-6 inline-block rounded-lg" />
     </section>
   </Layout>
 </template>

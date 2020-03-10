@@ -1,5 +1,5 @@
 <template>
-  <div class="leading-normal p-4 md:mx-6 mb-12" role="alert">
+  <div class="p-4 mb-12 leading-normal md:mx-6" role="alert">
     <slot>This is an alert, you should probably pass it some text...</slot>
   </div>
 </template>

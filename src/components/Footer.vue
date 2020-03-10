@@ -1,21 +1,21 @@
 <template>
-  <footer class="text-black text-sm leading-normal flex flex-wrap justify-between mx-auto max-w-3xl px-6 sm:px-12">
-    <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
+  <footer class="flex flex-wrap justify-between px-6 mx-auto text-sm leading-normal text-black sm:px-12">
+    <div class="w-full sm:w-1/2 sm:mb-0">
     </div>
     <div class="w-full sm:w-1/2">
       <nav>
-        <ul class="flex sm:justify-end -mx-2">
-          <li class="mx-4">
-            <g-link to="/" class="border-b border-transparent hover:border-gray-400 transition-border-color">Home</g-link>
+        <ul class="flex -mx-2 sm:justify-end">
+          <li class="mx-4 rounded hover:bg-purple-500 hover:text-white">
+            <g-link to="/" class="px-4 py-2 border-b border-transparent hover:border-gray-400 transition-border-color">Home</g-link>
           </li>
-          <li class="mx-4">
-            <g-link to="/about/" class="border-b border-transparent hover:border-gray-400 transition-border-color">About</g-link>
+          <li class="mx-4 rounded hover:bg-purple-500 hover:text-white">
+            <g-link to="/about/" class="px-4 py-2 border-b border-transparent hover:border-gray-400 transition-border-color">About</g-link>
           </li>
-          <li class="mx-4">
-            <a href="/sitemap.xml" class="border-b border-transparent hover:border-gray-400 transition-border-color">Sitemap</a>
+          <li class="mx-4 rounded hover:bg-purple-500 hover:text-white">
+            <a href="/sitemap.xml" class="px-4 py-2 border-b border-transparent hover:border-gray-400 transition-border-color">Sitemap</a>
           </li>
-          <li class="mx-4">
-            <a href="/feed.xml" class="border-b border-transparent hover:border-gray-400 transition-border-color">RSS</a>
+          <li class="mx-4 rounded hover:bg-purple-500 hover:text-white">
+            <a href="/feed.xml" class="px-4 py-2 border-b border-transparent hover:border-gray-400 transition-border-color">RSS</a>
           </li>
         </ul>
       </nav>

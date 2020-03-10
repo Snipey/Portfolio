@@ -1,10 +1,10 @@
 <template>
   <header>
-    <div v-if="post.cover" class="post-cover overflow-hidden relative" :class="[post.fullscreen ? 'fullscreen' : 'max-h-cover']">
-      <div class="max-w-xl md:max-w-3xl xl:max-w-4xl text-center px-6 absolute z-10" :class="[post.fullscreen ? 'flex flex-col items-center m-auto inset-0': 'mx-auto bottom-0 inset-x-0 pb-16']">
+    <div v-if="post.cover" class="relative overflow-hidden post-cover" :class="[post.fullscreen ? 'fullscreen' : 'max-h-cover']">
+      <div class="absolute z-10 max-w-xl px-6 text-center md:max-w-3xl xl:max-w-4xl" :class="[post.fullscreen ? 'flex flex-col items-center m-auto inset-0': 'mx-auto bottom-0 inset-x-0 pb-16']">
         <div class="m-auto">
-          <p class="font font-bold text-white text-xs mb-2 uppercase">{{ post.timeToRead }} min read</p>
-          <h1 class="text-3xl sm:text-5xl font-sans font-bold leading-tight mb-2 text-white">{{ post.title }}</h1>
+          <p class="mb-2 text-xs font-bold text-white uppercase font">{{ post.timeToRead }} min read</p>
+          <h1 class="mb-2 font-sans text-3xl font-bold leading-tight text-white sm:text-5xl">{{ post.title }}</h1>
           <p class="text-white">
             <span v-if="post.author">
               <g-link :to="`${post.author.path}/`" class="text-white capitalize border-b border-transparent hover:border-white transition-border-color">{{ titleCase(post.author.title) }}</g-link> &bull;
@@ -20,9 +20,9 @@
       </ClientOnly>
     </div>
     <div v-else class="pt-24">
-      <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6">
-        <p class="text-white text-xs mb-2 uppercase">{{ post.timeToRead }} min read</p>
-        <h1 class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-white">{{ post.title }}</h1>
+      <div class="max-w-xl px-6 mx-auto text-center md:max-w-3xl xl:max-w-4xl">
+        <p class="mb-2 text-xs text-white uppercase">{{ post.timeToRead }} min read</p>
+        <h1 class="mb-2 font-sans text-3xl font-bold leading-tight text-white sm:text-5xl">{{ post.title }}</h1>
         <p class="text-white">
           <span v-if="post.author">
             <g-link :to="`${post.author.path}/`" class="text-white capitalize border-b border-transparent hover:border-gray-400 transition-border-color">{{ titleCase(post.author.title) }}</g-link> &bull;
