@@ -2,15 +2,15 @@
 	<div class="flex justify-center pt-2">
 		<div v-for="item in socials">
 			<a :href="item.link" class="mx-1">
-				<font-awesome class="icon text-purple-400 hover:text-purple-600 transition-color" :icon="['fab', `${item.name}`]"/>
+				<font-awesome class="text-purple-400 hover:text-purple-600 transition-color" :icon="['fab', `${item.name}`]"/>
 			</a>
 		</div>
 	</div>
 </template>
 <style scoped>
 	.icon {
-		width: 32px;
-		height: 32px;
+		width: 64px;
+		height: 64px;
 	}
 </style>
 <script>

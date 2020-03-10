@@ -15,7 +15,9 @@
           </p>
         </header>
         <p class="text-lg leading-normal text-black " v-html="excerpt(post, 290, ' ...')"></p>
-        <a class="px-4 mt-4 bg-gray-600 rounded-lg button">Read more</a>
+        <div class="mt-4">
+          <g-link :to="`${post.path}/`" class="px-4 py-1 bg-purple-500 border-purple-500 rounded-lg border-1 hover:bg-purple-600 button">Read more &rarr;</g-link>
+        </div>
       </div>
     </div>
   </article>

@@ -4,7 +4,7 @@
     </div>
     <div class="w-full sm:w-1/2">
       <nav>
-        <ul class="flex -mx-2 sm:justify-end">
+        <ul class="flex -mx-2">
           <li class="mx-4 rounded hover:bg-purple-500 hover:text-white">
             <g-link to="/" class="px-4 py-2 border-b border-transparent hover:border-gray-400 transition-border-color">Home</g-link>
           </li>

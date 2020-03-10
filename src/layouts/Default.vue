@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-wrap parent">
-    <Navbar class="block lg:hidden" @click="menuToggle()"/>
+    <Navbar class="fixed max-w-full lg:hidden navigation" @click="menuToggle()"/>
     <Sidebar class="hidden w-1/6 sidebar lg:block"/>
-    <div class="mx-auto content">
+    <div class="mx-auto mt-16 content">
       <slot />
     </div>
   </div>
@@ -15,6 +15,9 @@
 .sidebar {
   height: 100%;
   overflow: auto;
+}
+.navigation {
+  width:100vw
 }
 .content {
   flex: 1;

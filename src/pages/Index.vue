@@ -5,7 +5,7 @@
         <post-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
       </section>
       <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
-      <site-footer class="mb-8 sm:my-8 bg-white py-2 px-6 inline-block rounded-lg" />
+      <site-footer class="hidden px-6 py-2 mb-8 bg-white rounded-lg md:inline-block sm:my-8" />
     </section>
   </Layout>
 </template>

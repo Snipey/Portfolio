@@ -12,5 +12,5 @@
 
 html {
 	background: rgb(23,0,71);
-	background: linear-gradient(45deg, rgba(23,0,71,1) 0%, rgba(39,0,94,1) 50%, rgba(35,0,117,1) 100%);
+	background: linear-gradient(45deg, rgb(39, 0, 122) 0%, rgba(39,0,94,1) 50%, rgba(35,0,117,1) 100%);
 }

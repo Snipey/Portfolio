@@ -3,30 +3,30 @@
     <main>
       <post-header :post="$page.post" />
 
-      <article class="max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto px-6 sm:px-12 pt-16" :class="{'border-b border-grey-lighter pb-10 mb-16': !$page.post.author}">
+      <article class="max-w-xl px-6 pt-16 bg-white md:mx-auto md:max-w-2xl xl:max-w-3xl sm:px-12" :class="{'border-b border-grey-lighter pb-10 mb-16': !$page.post.author}">
 
-        <alert v-if="postIsOlderThanOneYear" class="bg-orange-100 border-l-4 border-orange-500 text-orange-900">
+        <alert v-if="postIsOlderThanOneYear" class="text-orange-900 bg-orange-100 border-l-4 border-orange-500">
           This post is over a year old, some of this information may be out of date.
         </alert>
 
-        <div :class="{'pb-10': $page.post.author || $page.post.tags}" class="markdown text-lg leading-normal text-black" v-html="$page.post.content" />
+        <div :class="{'pb-10': $page.post.author || $page.post.tags}" class="text-lg leading-normal text-black markdown" v-html="$page.post.content" />
 
         <footer v-if="$page.post.author || $page.post.tags" class="flex flex-wrap pb-10 sm:pb-16">
           <div>
-            <g-link v-for="tag in $page.post.tags" :key="tag.id" :to="`${tag.path}/`" class="inline-block text-purple-400 hover:text-black hover:bg-purple-400 border border-purple-400 font-sans font-bold text-xs sm:text-sm px-4 py-2 mr-4 mb-2 rounded-full transition-color transition-bg">
-            <svg class="inline w-3 fill-current align-middle mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img"><path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+            <g-link v-for="tag in $page.post.tags" :key="tag.id" :to="`${tag.path}/`" class="inline-block px-4 py-2 mb-2 mr-4 font-sans text-xs font-bold text-purple-400 border border-purple-400 rounded-full hover:text-black hover:bg-purple-400 sm:text-sm transition-color transition-bg">
+            <svg class="inline w-3 mr-1 align-middle fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img"><path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
             {{ tag.title }}
             </g-link>
           </div>
-          <div v-if="$page.post.author" class="flex flex-wrap items-center justify-center sm:justify-left border-t border-b border-gray-300 w-full mt-10 py-10 sm:px-16">
-            <figure class="px-2 mb-1 sm:mb-0 w-full sm:w-1/5 flex justify-center">
+          <div v-if="$page.post.author" class="flex flex-wrap items-center justify-center w-full py-10 mt-10 border-t border-b border-gray-300 sm:justify-left sm:px-16">
+            <figure class="flex justify-center w-full px-2 mb-1 sm:mb-0 sm:w-1/5">
               <g-link :to="`${$page.post.author.path}/`">
-                <img :src="avatar" :alt="$page.post.author.title" @error="imageLoadError" width="100" class="rounded-full p-4 sm:p-0">
+                <img :src="avatar" :alt="$page.post.author.title" @error="imageLoadError" width="100" class="p-4 rounded-full sm:p-0">
               </g-link>
             </figure>
-            <div class="px-4 sm:w-4/5 text-center sm:text-left">
-              <h4 class="font-sans font-bold text-lg sm:text-xl mb-2 sm:mb-4">
-                <g-link :to="`${$page.post.author.path}/`" class="text-black hover:text-gray-600 capitalize border-b-2 border-transparent transition-color">{{ titleCase($page.post.author.title) }}</g-link>
+            <div class="px-4 text-center sm:w-4/5 sm:text-left">
+              <h4 class="mb-2 font-sans text-lg font-bold sm:text-xl sm:mb-4">
+                <g-link :to="`${$page.post.author.path}/`" class="text-black capitalize border-b-2 border-transparent hover:text-gray-600 transition-color">{{ titleCase($page.post.author.title) }}</g-link>
               </h4>
               <p class="leading-normal">
                 <g-link :to="`${$page.post.author.path}/`" class="text-blue-500 hover:text-blue-400 transition-color">See all posts by {{ titleCase($page.post.author.title) }} &rarr;</g-link>
@@ -75,8 +75,8 @@ export default {
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: this.$page.post.title },
         { name: "twitter:description", content: this.description(this.$page.post) },
-        { name: "twitter:site", content: "@cossssmin" },
-        { name: "twitter:creator", content: "@cossssmin" },
+        { name: "twitter:site", content: "@snipeydev" },
+        { name: "twitter:creator", content: "@snipeydev" },
         { name: "twitter:image", content: this.ogImageUrl },
       ],
     }

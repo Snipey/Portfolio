@@ -2,10 +2,10 @@
   <Layout>
     <main>
       <header>
-        <div class="max-w-xl md:max-w-3xl xl:max-w-4xl flex flex-col-reverse mx-auto text-center px-6 pt-24 pb-10 md:py-10 border-b border-gray-300">
-          <p class="text-black leading-normal">{{ $page.tag.belongsTo.totalCount }} posts in total</p>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-2 capitalize">{{ titleCase($page.tag.title) }}</h1>
-          <svg class="w-5 sm:w-6 fill-current text-gray-500 mx-auto mb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img" aria-labelledby="tagIcon"><title id="tagIcon">Posts tagged</title><path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+        <div class="flex flex-col-reverse w-1/3 max-w-xl px-6 pt-24 pb-10 mx-auto text-center bg-white border-b border-gray-300 rounded-lg md:max-w-3xl xl:max-w-4xl md:py-10">
+          <p class="leading-normal text-black">{{ $page.tag.belongsTo.totalCount }} posts in total</p>
+          <h1 class="mb-2 font-sans text-4xl font-bold capitalize sm:text-5xl md:text-6xl">{{ titleCase($page.tag.title) }}</h1>
+          <svg class="w-5 mx-auto mb-1 text-gray-500 fill-current sm:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img" aria-labelledby="tagIcon"><title id="tagIcon">Posts tagged</title><path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         </div>
       </header>
       <section>
@@ -49,8 +49,8 @@ export default {
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: `Posts tagged "${this.titleCase(this.$page.tag.title)}"` },
         { name: "twitter:description", content: `Browse posts tagged "${this.titleCase(this.$page.tag.title)}"` },
-        { name: "twitter:site", content: "@cossssmin" },
-        { name: "twitter:creator", content: "@cossssmin" },
+        { name: "twitter:site", content: "@snipeydev" },
+        { name: "twitter:creator", content: "@snipeydev" },
         { name: "twitter:image", content: this.ogImageUrl },
       ],
     }
